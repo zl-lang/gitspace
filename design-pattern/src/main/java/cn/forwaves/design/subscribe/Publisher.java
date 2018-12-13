@@ -30,7 +30,7 @@ public class Publisher implements IPublish {
         while(it.hasNext()){
             ISubscribeDispatch dispatcher = it.next();
             if(dispatcher != null){
-                dispatcher.notifySubscribe(message);
+                dispatcher.notifySubscriber(message);
             }else{
                 dispatchers.remove(null);
             }
